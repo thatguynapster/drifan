@@ -1,6 +1,9 @@
 import React, { FC } from 'react'
 import { Navbar } from '../components/navbar'
+import { Popover, Transition } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ILayoutProps } from '../types'
+import ChatUs from '../components/chat'
 
 const Layout: FC<ILayoutProps> = ({ pagename, children, navVariant }) => {
   // console.log(userDetails)
@@ -16,12 +19,7 @@ const Layout: FC<ILayoutProps> = ({ pagename, children, navVariant }) => {
         <div className="flex flex-row justify-start">
           <div className="w-full" style={{ paddingTop: '80px' }}>
             {children}
-            <div
-              className="fixed bottom-0 right-0 mr-6 md:mr-11 mb-6 md:mb-11 cursor-pointer bg-gray-100 rounded-full p-3"
-              id="box_btn"
-            >
-              <img className="w-8 h-8 mx-auto" src="/icons/messages.svg" alt="Message Us" />
-            </div>
+            <ChatUs />
           </div>
         </div>
       </div>
