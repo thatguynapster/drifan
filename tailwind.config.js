@@ -56,7 +56,10 @@ module.exports = {
           700: '#223551',
           900: '#000000',
         },
-      }
+      },
+      backgroundImage: theme => ({
+        'hero-pattern': "url('/img/hero-pattern.svg')",
+       })
     },
   },
   variants: {

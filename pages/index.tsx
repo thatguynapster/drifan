@@ -13,34 +13,36 @@ const Login: FC = () => {
 
       {/* PAGE CONTENT HERE... */}
       {/* Hero section */}
-      <div className="grid justify-items-center pt-20 md:pt-24 bg-white px-4 lg:px-0">
-        <div className="text-center">
-          <h1 className="text-5xl font-semibold text-dark-900">
-            What if your post could save a life?
-          </h1>
-          <p className="text-lg text-gray-600">
-            Drifan is a community that shows and allows you to post road alerts and events near you
-            in real time
-          </p>
-        </div>
+      <div className="bg-white">
+        <div className="grid justify-items-center pt-20 md:pt-24 bg-hero-pattern px-4 lg:px-0">
+          <div className="text-center">
+            <h1 className="text-5xl font-semibold text-dark-900">
+              What if your post could save a life?
+            </h1>
+            <p className="text-lg text-gray-600">
+              Drifan is a community that shows and allows you to post road alerts and events near
+              you in real time
+            </p>
+          </div>
 
-        <div className="mt-28">
-          <img className="md:px-96" src="/img/illustration_01.svg" alt="Illustration" />
-        </div>
+          <div className="mt-28">
+            <img className="md:px-96" src="/img/illustration_01.svg" alt="Illustration" />
+          </div>
 
-        <div className="mt-20 mb-28 space-x-4 text-center">
-          <button
-            type="button"
-            className="mx-auto rounded-md shadow-sm py-3 px-8 bg-blue text-base text-white focus:outline-none focus:ring-2 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
-          >
-            Explore
-          </button>
-          <button
-            type="button"
-            className="mx-auto rounded-md shadow-sm py-3 px-8 bg-white border border-blue text-base text-blue focus:outline-none focus:ring-2 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
-          >
-            Sign up
-          </button>
+          <div className="mt-20 mb-28 space-x-4 text-center">
+            <button
+              type="button"
+              className="mx-auto rounded-md shadow-sm py-3 px-8 bg-blue text-base text-white focus:outline-none focus:ring-2 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+            >
+              Explore
+            </button>
+            <button
+              type="button"
+              className="mx-auto rounded-md shadow-sm py-3 px-8 bg-white border border-blue text-base text-blue focus:outline-none focus:ring-2 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+            >
+              Sign up
+            </button>
+          </div>
         </div>
       </div>
 
