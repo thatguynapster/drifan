@@ -11,11 +11,7 @@ export const HeadFile: FC<IHeaderProps> = ({ title, canonical }) => {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="keywords" content="" />
-        <link
-          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-          rel="stylesheet"
-        />
+        {/* <meta name="keywords" content="" /> */}
       </Head>
 
       <NextSeo
