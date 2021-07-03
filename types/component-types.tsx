@@ -3,7 +3,7 @@ import { ReactNode, Dispatch, SetStateAction } from 'react'
 export interface ILayoutProps {
   pagename: string
   children: ReactNode
-  userDetails?: any
+  navVariant?: string
 }
 
 export interface IHeaderProps {
