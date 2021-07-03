@@ -15,7 +15,10 @@ const Contact: FC = () => {
       {/* <div className="pt-24 pb-32 px-52 bg-blue"> */}
       <div className="pt-20 md:pt-24 pb-44 md:pb-32 bg-blue px-4 lg:px-52">
         <h1 className="text-4xl text-white text-center font-semibold">Get in touch</h1>
-        <div className="mt-14 md:mt-24 md:mx-56 rounded-xl py-12 px-10 bg-white">
+        <div
+          className="mt-14 md:mt-24 md:mx-auto rounded-xl py-12 px-10 bg-white"
+          style={{ maxWidth: '580px' }}
+        >
           <div className="mb-8">
             <label htmlFor="price" className="block text-base font-semibold text-blue">
               Your name
