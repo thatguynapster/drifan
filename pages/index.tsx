@@ -199,7 +199,7 @@ const Login: FC = () => {
       {/* newsletter section */}
       <div className="grid justify-items-center px-4 lg:px-0 bg-gradient-to-b from-green-100 to-green-200">
         <div className="w-full py-16 md:px-40">
-          <div className="md:px-48 py-16 md:flex">
+          <div className="md:px-48 py-16 md:flex justify-center">
             <img
               className="w-1/2 mx-auto md:mx-0 md:w-44 justify-start mb-14 md:mb-0"
               src="/icons/email-us.svg"
