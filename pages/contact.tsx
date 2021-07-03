@@ -1,8 +1,5 @@
 import HeadFile from '../components/head-file'
-import React, { FC, useState, useContext, useEffect, Fragment } from 'react'
-import { toast } from 'react-toastify'
-import API from '../lib/api'
-import { navigate } from '../lib'
+import React, { FC } from 'react'
 import Layout from '../components/layout'
 import { Footer } from '../components/footer'
 
@@ -11,8 +8,6 @@ const Contact: FC = () => {
     <Layout pagename="contact" navVariant="blue">
       <HeadFile title="Drifan" />
 
-      {/* PAGE CONTENT HERE... */}
-      {/* <div className="pt-24 pb-32 px-52 bg-blue"> */}
       <div className="pt-20 md:pt-24 pb-44 md:pb-32 bg-blue px-4 lg:px-52">
         <h1 className="text-4xl text-white text-center font-semibold">Get in touch</h1>
         <div
@@ -71,7 +66,6 @@ const Contact: FC = () => {
         </div>
       </div>
 
-      {/* footer section */}
       <Footer />
     </Layout>
   )

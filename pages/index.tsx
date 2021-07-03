@@ -1,8 +1,5 @@
 import HeadFile from '../components/head-file'
-import React, { FC, useState, useContext, useEffect, Fragment } from 'react'
-import { toast } from 'react-toastify'
-import API from '../lib/api'
-import { navigate } from '../lib'
+import React, { FC } from 'react'
 import Layout from '../components/layout'
 import { Footer } from '../components/footer'
 
@@ -11,7 +8,6 @@ const Login: FC = () => {
     <Layout pagename="home">
       <HeadFile title="Drifan" />
 
-      {/* PAGE CONTENT HERE... */}
       {/* Hero section */}
       <div className="bg-white">
         <div className="grid justify-items-center pt-16 md:pt-24 bg-hero-pattern px-4 lg:px-0">
@@ -229,7 +225,6 @@ const Login: FC = () => {
         </div>
       </div>
 
-      {/* footer section */}
       <Footer />
     </Layout>
   )
