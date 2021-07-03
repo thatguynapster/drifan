@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 import Layout from '../components/layout'
 import { Footer } from '../components/footer'
 
-const Contact: FC = () => {
+const About: FC = () => {
   return (
     <Layout pagename="about">
       <HeadFile title="Drifan" />
@@ -53,4 +53,4 @@ const Contact: FC = () => {
   )
 }
 
-export default Contact
+export default About

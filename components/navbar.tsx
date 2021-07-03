@@ -124,7 +124,7 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
                         </span>
                       </a>
                       <a
-                        href="#"
+                        href="/team"
                         className={`-m-3 p-3 flex items-center rounded-md hover:bg-gray-50`}
                       >
                         <span className={`ml-3 text-base font-medium capitalize ${textColor}`}>

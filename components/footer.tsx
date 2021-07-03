@@ -5,7 +5,7 @@ export const Footer: FC = () => {
   return (
     <div className="grid justify-items-center px-4 lg:px-0 bg-blue">
       <div className="mt-10 mb-24 text-center">
-        <h3 className="w-full text-white font-bold text-4xl mb-8">Drifan</h3>
+        <h2 className="w-full text-white font-bold text-4xl mb-8">Drifan</h2>
         <p className="w-full text-white md:mx-auto md:w-96 mb-12">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
         </p>
