@@ -17,7 +17,7 @@ const Layout: FC<ILayoutProps> = ({ pagename, children, navVariant }) => {
           <div className="w-full" style={{ paddingTop: '80px' }}>
             {children}
             <div
-              className="fixed bottom-0 right-0 mr-11 mb-11 cursor-pointer bg-gray-100 rounded-full p-3"
+              className="fixed bottom-0 right-0 mr-6 md:mr-11 mb-6 md:mb-11 cursor-pointer bg-gray-100 rounded-full p-3"
               id="box_btn"
             >
               <img className="w-8 h-8 mx-auto" src="/icons/messages.svg" alt="Message Us" />

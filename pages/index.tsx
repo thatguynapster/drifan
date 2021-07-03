@@ -14,7 +14,7 @@ const Login: FC = () => {
       {/* PAGE CONTENT HERE... */}
       {/* Hero section */}
       <div className="bg-white">
-        <div className="grid justify-items-center pt-20 md:pt-24 bg-hero-pattern px-4 lg:px-0">
+        <div className="grid justify-items-center pt-16 md:pt-24 bg-hero-pattern px-4 lg:px-0">
           <div className="text-center">
             <h1 className="text-5xl font-semibold text-dark-900">
               What if your post could save a life?
@@ -25,7 +25,7 @@ const Login: FC = () => {
             </p>
           </div>
 
-          <div className="mt-28">
+          <div className="mt-16 md:mt-28">
             <img className="md:px-96" src="/img/illustration_01.svg" alt="Illustration" />
           </div>
 
@@ -47,8 +47,8 @@ const Login: FC = () => {
       </div>
 
       {/* how it works section */}
-      <div className="grid justify-items-center px-4 lg:px-0">
-        <div className="mt-10 mb-24">
+      <div className="mt-10 mb-24">
+        <div className="grid justify-items-center px-4 lg:px-0">
           <h2 className="text-4xl font-semibold text-center text-dark-900">How it works</h2>
           <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 mt-10">
             <div className="relative mx-auto mr-0 my-auto">
