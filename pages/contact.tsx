@@ -6,9 +6,9 @@ import { navigate } from '../lib'
 import Layout from '../components/layout'
 import { Footer } from '../components/footer'
 
-export const Login: FC = () => {
+const Contact: FC = () => {
   return (
-    <Layout pagename="home" navVariant="blue">
+    <Layout pagename="contact" navVariant="blue">
       <HeadFile title="Drifan" />
 
       {/* PAGE CONTENT HERE... */}
@@ -74,4 +74,4 @@ export const Login: FC = () => {
   )
 }
 
-export default Login
+export default Contact

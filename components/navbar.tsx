@@ -45,18 +45,16 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
 
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <Popover.Group as="nav" className="hidden md:flex space-x-5">
-                  {pagename !== 'home' && (
-                    <a href="#" className="text-base font-semibold capitalize">
-                      how it works
-                    </a>
-                  )}
-                  <a href="#" className="text-base font-semibold">
+                  <a href="/how-it-works" className="text-base font-semibold capitalize">
+                    how it works
+                  </a>
+                  <a href="/about" className="text-base font-semibold">
                     About Us
                   </a>
-                  <a href="#" className="text-base font-semibold">
+                  <a href="/contact" className="text-base font-semibold">
                     Contact Us
                   </a>
-                  <a href="#" className="text-base font-semibold">
+                  <a href="/team" className="text-base font-semibold">
                     Our team &amp; Partners
                   </a>
                 </Popover.Group>
@@ -98,18 +96,16 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
                   </div>
                   <div className="mt-6">
                     <nav className="grid gap-y-8">
-                      {pagename !== 'home' && (
-                        <a
-                          href="#"
-                          className={`-m-3 p-3 flex items-center rounded-md hover:bg-gray-50`}
-                        >
-                          <span className={`ml-3 text-base font-medium capitalize ${textColor}`}>
-                            how it works
-                          </span>
-                        </a>
-                      )}
                       <a
-                        href="#"
+                        href="/how-it-works"
+                        className={`-m-3 p-3 flex items-center rounded-md hover:bg-gray-50`}
+                      >
+                        <span className={`ml-3 text-base font-medium capitalize ${textColor}`}>
+                          how it works
+                        </span>
+                      </a>
+                      <a
+                        href="/about"
                         className={`-m-3 p-3 flex items-center rounded-md hover:bg-gray-50`}
                       >
                         <span className={`ml-3 text-base font-medium capitalize ${textColor}`}>
@@ -117,7 +113,7 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
                         </span>
                       </a>
                       <a
-                        href="#"
+                        href="/contact"
                         className={`-m-3 p-3 flex items-center rounded-md hover:bg-gray-50`}
                       >
                         <span className={`ml-3 text-base font-medium capitalize ${textColor}`}>

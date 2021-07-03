@@ -6,7 +6,7 @@ import { navigate } from '../lib'
 import Layout from '../components/layout'
 import { Footer } from '../components/footer'
 
-export const Login: FC = () => {
+const Login: FC = () => {
   return (
     <Layout pagename="home">
       <HeadFile title="Drifan" />
