@@ -5,7 +5,6 @@ import { Autocomplete, LoadScriptNext } from '@react-google-maps/api'
 import { toast } from 'react-toastify'
 import API from '../lib/api'
 import { navigate } from '../lib'
-import AuthContext from '../context/auth-context'
 
 
 export const ProfileContextMenu: FC<ReactNode> = ({ children }) => {
