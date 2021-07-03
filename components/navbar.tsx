@@ -15,7 +15,7 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
     case 'blue':
       navType = 'bg-blue text-white'
       textColor = 'text-white'
-      logo = '/img/logo-white.png'
+      logo = '/icons/logo-white.svg'
       break
     default:
       navType = 'bg-white text-gray-900'
@@ -85,7 +85,7 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
                 <div className="pt-5 pb-6 px-5">
                   <div className="flex items-center justify-between">
                     <div>
-                      <img className="h-auto w-1/4" src={logo} alt="Workflow" />
+                      <img className="h-auto w-full" src={logo} alt="Workflow" />
                     </div>
                     <div className="-mr-2">
                       <Popover.Button
