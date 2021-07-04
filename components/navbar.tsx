@@ -31,8 +31,10 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
           <div className="max-w-screen-lg mx-auto px-4 sm:px-6">
             <div className="flex justify-between items-center h-20 md:justify-start md:space-x-10">
               <div className="flex justify-start lg:w-0 lg:flex-1">
-                <span className="sr-only">Drifan</span>
-                <img className="h-auto md:w-1/5 cursor-pointer" src={logo} alt="" />
+                <a href="/">
+                  <span className="sr-only">Drifan</span>
+                  <img className="cursor-pointer" src={logo} alt="" />
+                </a>
               </div>
               <div className="-mr-2 -my-2 md:hidden">
                 <Popover.Button
@@ -82,9 +84,10 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
               >
                 <div className="pt-5 pb-6 px-5">
                   <div className="flex items-center justify-between">
-                    <div>
+                    <a href="/">
+                      <span className="sr-only">Drifan</span>
                       <img className="h-auto w-full" src={logo} alt="Workflow" />
-                    </div>
+                    </a>
                     <div className="-mr-2">
                       <Popover.Button
                         className={`${navType} rounded-md p-2 inline-flex items-center justify-center  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500`}
@@ -121,7 +124,7 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
                         </span>
                       </a>
                       <a
-                        href="#"
+                        href="/team"
                         className={`-m-3 p-3 flex items-center rounded-md hover:bg-gray-50`}
                       >
                         <span className={`ml-3 text-base font-medium capitalize ${textColor}`}>

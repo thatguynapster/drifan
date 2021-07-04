@@ -1,8 +1,5 @@
 import HeadFile from '../components/head-file'
-import React, { FC, useState, useContext, useEffect, Fragment } from 'react'
-import { toast } from 'react-toastify'
-import API from '../lib/api'
-import { navigate } from '../lib'
+import React, { FC } from 'react'
 import Layout from '../components/layout'
 import { Footer } from '../components/footer'
 
@@ -11,9 +8,6 @@ const HowItWorks: FC = () => {
     <Layout pagename="how-it-works">
       <HeadFile title="Drifan" />
 
-      {/* PAGE CONTENT HERE... */}
-      {/* <div className="pt-24 pb-32 px-52 bg-blue"> */}
-      {/* <div className="pt-24 md:pt-20 pb-44 md:pb-32 bg-white px-4 lg:px-52"> */}
       <div className="pt-24 md:pt-20 pb-44 md:pb-32 bg-white px-4 lg:px-96">
         <h1 className="text-4xl text-dark-900 text-center font-semibold">How it works</h1>
         <div className="mt-20">
@@ -61,9 +55,7 @@ const HowItWorks: FC = () => {
           </div>
         </div>
       </div>
-      {/* </div> */}
 
-      {/* footer section */}
       <Footer />
     </Layout>
   )
