@@ -3,29 +3,57 @@ import { Fragment, FC } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { INavbarProps } from '../types'
+import { useGlobalScroll } from '../utils/window-events'
+import { useState } from 'react'
+import { useEffect } from 'react'
 
 // export default function Navbar() {
 export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
   console.log(pagename)
+  const [navVariant, setNavVariant] = useState<string | undefined>(variant)
+  const [navType, setNavType] = useState<string>('')
+  const [textColor, setTextColor] = useState<string>('')
+  const [logo, setLogo] = useState<string>('')
 
-  let navType: string = '',
-    textColor: string = '',
-    logo: string = ''
-  switch (variant) {
-    case 'blue':
-      navType = 'bg-blue text-white'
-      textColor = 'text-white'
-      logo = '/icons/logo-white.svg'
-      break
-    default:
-      navType = 'bg-white text-gray-900'
-      textColor = 'text-gray-900'
-      logo = '/icons/logo.svg'
-  }
+  useEffect(() => {
+    console.log(navVariant)
+    switch (navVariant) {
+      case 'blue':
+        setNavType('bg-blue text-white')
+        setTextColor('text-white')
+        setLogo('/icons/logo-white.svg')
+        break
+      default:
+        setNavType('bg-white text-gray-900')
+        setTextColor('text-gray-900')
+        setLogo('/icons/logo.svg')
+    }
+  }, [navVariant])
+
+  useGlobalScroll((ev: any) => {
+    // console.log(ev.currentTarget)
+    if (ev.currentTarget.pageYOffset > 60) {
+      if (pagename !== 'contact') {
+        setNavVariant('blue')
+        console.log('nav is blue')
+      } else {
+        setNavVariant('white')
+        console.log('nav is white')
+      }
+    } else {
+      if (pagename !== 'contact') {
+        setNavVariant('white')
+        console.log('nav is white')
+      } else {
+        setNavVariant('blue')
+        console.log('nav is blue')
+      }
+    }
+  })
 
   return (
     // <div className="fixed">
-    <Popover className={`fixed inset-x-0 z-50 ${navType}`}>
+    <Popover className={`fixed inset-x-0 z-50 ${navType} shadow-md`}>
       {({ open }) => (
         <>
           <div className="max-w-screen-lg mx-auto px-4 sm:px-6">
