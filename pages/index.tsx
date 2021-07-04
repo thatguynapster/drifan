@@ -16,7 +16,7 @@ const Login: FC = () => {
 
       {/* Hero section */}
       <div className="bg-white">
-        <div className="grid justify-items-center pt-16 md:pt-24 bg-hero-pattern px-4 lg:px-0">
+        <div className="grid justify-items-center pt-4 lg:pt-16 bg-hero-pattern px-4 lg:px-0">
           <div className="text-center">
             <h1 className="text-5xl font-semibold text-dark-900">
               What if your post could save a life?
@@ -27,11 +27,11 @@ const Login: FC = () => {
             </p>
           </div>
 
-          <div className="mt-16 md:mt-28">
-            <img className="md:px-96" src="/img/illustration_01.svg" alt="Illustration" />
+          <div className="mt-16 lg:mt-28">
+            <img className="xl:px-96" src="/img/illustration_01.svg" alt="Illustration" />
           </div>
 
-          <div className="mt-20 mb-28 space-x-4 text-center">
+          <div className="mt-8 lg:mt-20 mb-12 lg:mb-28 space-x-2 sm:space-x-4 text-center">
             <button
               type="button"
               className="mx-auto rounded-md shadow-sm py-3 px-8 bg-blue text-base text-white focus:outline-none focus:ring-2 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
@@ -53,7 +53,7 @@ const Login: FC = () => {
         <div className="grid justify-items-center px-4 lg:px-0">
           <h2 className="text-4xl font-semibold text-center text-dark-900">How it works</h2>
           <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 mt-10">
-            <div className="relative mx-auto mr-0 my-auto bg-white rounded-xl w-full lg:w-1/2">
+            <div className="relative mx-auto mr-0 my-auto bg-white rounded-xl w-full lg:w-4/5 xl:w-1/2">
               <img
                 className="my-auto rounded-xl w-full"
                 src={selectedFeatureImage}
@@ -71,32 +71,26 @@ const Login: FC = () => {
                   setSelectedFeatureImage('/icons/share-content.svg')
                 }}
               >
-                <div className="w-2/7">
-                  <div
-                    className="flex flex-wrap content-center"
-                    style={{
-                      position: 'static',
-                      width: '96px',
-                      height: '96px',
-                      left: '48px',
-                      top: '24px',
-                      background: '#F4F5F7',
-                      borderRadius: '100px',
-                      flex: 'none',
-                      order: 0,
-                      flexGrow: 0,
-                      margin: '0px auto'
-                    }}
-                    id="box_btn"
-                  >
-                    <img
-                      className="w-8 h-8 m-auto items-center"
-                      src="/icons/eye.svg"
-                      alt="Message Us"
-                    />
-                  </div>
+                <div
+                  className="flex flex-wrap content-center w-20 lg:w-24 h-20 lg:h-24 my-auto"
+                  style={{
+                    position: 'static',
+                    left: '48px',
+                    top: '24px',
+                    background: '#F4F5F7',
+                    borderRadius: '100px',
+                    flex: 'none',
+                    order: 0,
+                    flexGrow: 0
+                  }}
+                >
+                  <img
+                    className="w-8 h-8 m-auto items-center"
+                    src="/icons/eye.svg"
+                    alt="Message Us"
+                  />
                 </div>
-                <div className="w-5/7 my-auto">
+                <div className="my-auto">
                   <p className="text-sm md:text-base">
                     Post or view local road alerts and events in real time for timely intervention
                     and accident prevention
@@ -113,32 +107,26 @@ const Login: FC = () => {
                   setSelectedFeatureImage('/icons/emergency.svg')
                 }}
               >
-                <div className="w-2/7">
-                  <div
-                    className="flex flex-wrap content-center"
-                    style={{
-                      position: 'static',
-                      width: '96px',
-                      height: '96px',
-                      left: '48px',
-                      top: '24px',
-                      background: '#F4F5F7',
-                      borderRadius: '100px',
-                      flex: 'none',
-                      order: 0,
-                      flexGrow: 0,
-                      margin: '0px auto'
-                    }}
-                    id="box_btn"
-                  >
-                    <img
-                      className="w-8 h-8 m-auto items-center"
-                      src="/icons/phone.svg"
-                      alt="Message Us"
-                    />
-                  </div>
+                <div
+                  className="flex flex-wrap content-center w-20 lg:w-24 h-20 lg:h-24 my-auto"
+                  style={{
+                    position: 'static',
+                    left: '48px',
+                    top: '24px',
+                    background: '#F4F5F7',
+                    borderRadius: '100px',
+                    flex: 'none',
+                    order: 0,
+                    flexGrow: 0
+                  }}
+                >
+                  <img
+                    className="w-8 h-8 m-auto items-center"
+                    src="/icons/phone.svg"
+                    alt="Message Us"
+                  />
                 </div>
-                <div className="w-5/7 my-auto">
+                <div className="my-auto">
                   <p className="text-sm md:text-base">Access to emergency numbers on or off line</p>
                 </div>
               </div>
@@ -152,32 +140,26 @@ const Login: FC = () => {
                   setSelectedFeatureImage('/icons/share-content-2.svg')
                 }}
               >
-                <div className="w-2/7">
-                  <div
-                    className="flex flex-wrap content-center"
-                    style={{
-                      position: 'static',
-                      width: '96px',
-                      height: '96px',
-                      left: '48px',
-                      top: '24px',
-                      background: '#F4F5F7',
-                      borderRadius: '100px',
-                      flex: 'none',
-                      order: 0,
-                      flexGrow: 0,
-                      margin: '0px auto'
-                    }}
-                    id="box_btn"
-                  >
-                    <img
-                      className="w-8 h-8 m-auto items-center"
-                      src="/icons/meter.svg"
-                      alt="Message Us"
-                    />
-                  </div>
+                <div
+                  className="flex flex-wrap content-center w-20 lg:w-24 h-20 lg:h-24 my-auto"
+                  style={{
+                    position: 'static',
+                    left: '48px',
+                    top: '24px',
+                    background: '#F4F5F7',
+                    borderRadius: '100px',
+                    flex: 'none',
+                    order: 0,
+                    flexGrow: 0
+                  }}
+                >
+                  <img
+                    className="w-8 h-8 m-auto items-center"
+                    src="/icons/meter.svg"
+                    alt="Message Us"
+                  />
                 </div>
-                <div className="w-5/7 my-auto">
+                <div className="my-auto">
                   <p className="text-sm md:text-base">
                     Self pace road safety trainings, car maintenance hacks for newbies and existing
                     drivers to make them safe and up to date with new trends and regulations in a
@@ -195,32 +177,26 @@ const Login: FC = () => {
                   setSelectedFeatureImage('/icons/rewards.svg')
                 }}
               >
-                <div className="w-2/7">
-                  <div
-                    className="flex flex-wrap content-center"
-                    style={{
-                      position: 'static',
-                      width: '96px',
-                      height: '96px',
-                      left: '48px',
-                      top: '24px',
-                      background: '#F4F5F7',
-                      borderRadius: '100px',
-                      flex: 'none',
-                      order: 0,
-                      flexGrow: 0,
-                      margin: '0px auto'
-                    }}
-                    id="box_btn"
-                  >
-                    <img
-                      className="w-8 h-8 m-auto items-center"
-                      src="/icons/star.svg"
-                      alt="Message Us"
-                    />
-                  </div>
+                <div
+                  className="flex flex-wrap content-center w-20 lg:w-24 h-20 lg:h-24 my-auto"
+                  style={{
+                    position: 'static',
+                    left: '48px',
+                    top: '24px',
+                    background: '#F4F5F7',
+                    borderRadius: '100px',
+                    flex: 'none',
+                    order: 0,
+                    flexGrow: 0
+                  }}
+                >
+                  <img
+                    className="w-8 h-8 m-auto items-center"
+                    src="/icons/star.svg"
+                    alt="Message Us"
+                  />
                 </div>
-                <div className="w-5/7 my-auto">
+                <div className="my-auto">
                   <p className="text-sm md:text-base">
                     Earn points for inviting friends or by answering pop quizes and reedem them for
                     amazing prices
@@ -234,15 +210,15 @@ const Login: FC = () => {
 
       {/* newsletter section */}
       <div className="grid justify-items-center px-4 lg:px-0 bg-gradient-to-b from-green-100 to-green-200">
-        <div className="w-full py-16 md:px-40">
-          <div className="md:px-48 py-16 md:flex justify-center">
+        <div className="w-full lg:py-16 md:px-16 md:px-40">
+          <div className="xl:px-48 py-16 lg:flex justify-center">
             <img
-              className="w-1/2 mx-auto md:mx-0 md:w-44 justify-start mb-14 md:mb-0"
+              className="w-1/2 mx-auto lg:mx-0 lg:w-44 justify-start mb-14 lg:mb-0"
               src="/icons/email-us.svg"
               alt=""
             />
-            <div className="md:pl-32 text-center">
-              <h2 className="text-5xl font-extrabold text-white mb-4 md:mb-8">Email Us</h2>
+            <div className="lg:pl-32 text-center">
+              <h2 className="text-5xl font-extrabold text-white mb-4 lg:mb-8">Email Us</h2>
 
               <div className="flex items-center">
                 <input
