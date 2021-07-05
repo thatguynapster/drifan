@@ -10,6 +10,7 @@ import { useEffect } from 'react'
 // export default function Navbar() {
 export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
   console.log(pagename)
+  const [navScroll, setNavScroll] = useState<boolean>(false)
   const [navVariant, setNavVariant] = useState<string | undefined>(variant)
   const [navType, setNavType] = useState<string>('')
   const [textColor, setTextColor] = useState<string>('')
@@ -33,6 +34,7 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
   useGlobalScroll((ev: any) => {
     // console.log(ev.currentTarget)
     if (ev.currentTarget.pageYOffset > 60) {
+      setNavScroll(true)
       if (pagename !== 'contact') {
         setNavVariant('blue')
         console.log('nav is blue')
@@ -41,6 +43,7 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
         console.log('nav is white')
       }
     } else {
+      setNavScroll(false)
       if (pagename !== 'contact') {
         setNavVariant('white')
         console.log('nav is white')
@@ -53,7 +56,7 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
 
   return (
     // <div className="fixed">
-    <Popover className={`fixed inset-x-0 z-50 ${navType} shadow-md`}>
+    <Popover className={`fixed inset-x-0 z-50 ${navScroll ? 'shadow-md' : ''} ${navType}`}>
       {({ open }) => (
         <>
           <div className="max-w-screen-lg mx-auto px-4 sm:px-6">
