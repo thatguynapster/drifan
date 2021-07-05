@@ -14,7 +14,7 @@ const HowItWorks: FC = () => {
           <div className="grid md:grid-cols-2 gap-x-20 gap-y-20">
             <div className="bg-gray-100 rounded-xl">
               <div className="mx-6 my-10">
-                <img className="w-full mb-14" src="/icons/share-content.svg" alt="Share Content" />
+                <img className="w-full mb-14" src="/img/share-content.svg" alt="Share Content" />
                 <p className="text-2xl font-semibold mb-6">Share content</p>
                 <p className="text-gray-600">
                   Post or view local road alerts and events in real time for timely intervention and
@@ -24,14 +24,14 @@ const HowItWorks: FC = () => {
             </div>
             <div className="bg-gray-100 rounded-xl">
               <div className="mx-6 my-10">
-                <img className="w-full mb-14" src="/icons/emergency.svg" alt="Share Content" />
+                <img className="w-full mb-14" src="/img/emergency.svg" alt="Share Content" />
                 <p className="text-2xl font-semibold mb-6">Emergency</p>
                 <p className="text-gray-600">Access to emergency numbers on or off line</p>
               </div>
             </div>
             <div className="bg-gray-100 rounded-xl">
               <div className="mx-6 my-10">
-                <img className="w-full mb-14" src="/icons/share-content-2.svg" alt="Share Content" />
+                <img className="w-full mb-14" src="/img/share-content-2.svg" alt="Share Content" />
                 <p className="text-2xl font-semibold mb-6">Share content</p>
                 <p className="text-gray-600">
                   Post or view local road alerts and events in real time for timely intervention and
@@ -41,18 +41,23 @@ const HowItWorks: FC = () => {
             </div>
             <div className="bg-gray-100 rounded-xl">
               <div className="mx-6 my-10">
-                <img
-                  className="w-full mb-14"
-                  src="/icons/rewards.svg"
-                  alt="Share Content"
-                />
+                <img className="w-full mb-14" src="/img/rewards.svg" alt="Share Content" />
                 <p className="text-2xl font-semibold mb-6">Rewards</p>
                 <p className="text-gray-600">
-                Earn points for inviting friends or by answering pop quizes and reedem them for amazing prices
+                  Earn points for inviting friends or by answering pop quizes and reedem them for
+                  amazing prices
                 </p>
               </div>
             </div>
           </div>
+        </div>
+        <div className="text-center">
+          <button
+            type="button"
+            className="mt-24 mx-auto rounded-md shadow-sm py-3 px-8 bg-blue text-base text-white focus:outline-none sm:w-auto sm:text-sm"
+          >
+            Try Now
+          </button>
         </div>
       </div>
 

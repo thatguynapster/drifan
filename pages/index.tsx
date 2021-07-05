@@ -6,9 +6,7 @@ import { useState } from 'react'
 
 const Login: FC = () => {
   const [selectedFeature, setSelectedFeature] = useState<string>('share')
-  const [selectedFeatureImage, setSelectedFeatureImage] = useState<string>(
-    '/icons/share-content.svg'
-  )
+  const [selectedFeatureImage, setSelectedFeatureImage] = useState<string>('/img/share-content.svg')
 
   return (
     <Layout pagename="home">
@@ -68,7 +66,7 @@ const Login: FC = () => {
                 }hover:bg-blue hover:text-white rounded-t-xl space-x-6 md:space-x-10`}
                 onClick={() => {
                   setSelectedFeature('share')
-                  setSelectedFeatureImage('/icons/share-content.svg')
+                  setSelectedFeatureImage('/img/share-content.svg')
                 }}
               >
                 <div
@@ -104,7 +102,7 @@ const Login: FC = () => {
                 }hover:bg-blue hover:text-white space-x-6 md:space-x-10`}
                 onClick={() => {
                   setSelectedFeature('emergency')
-                  setSelectedFeatureImage('/icons/emergency.svg')
+                  setSelectedFeatureImage('/img/emergency.svg')
                 }}
               >
                 <div
@@ -137,7 +135,7 @@ const Login: FC = () => {
                 }hover:bg-blue hover:text-white space-x-6 md:space-x-10`}
                 onClick={() => {
                   setSelectedFeature('share-2')
-                  setSelectedFeatureImage('/icons/share-content-2.svg')
+                  setSelectedFeatureImage('/img/share-content-2.svg')
                 }}
               >
                 <div
@@ -174,7 +172,7 @@ const Login: FC = () => {
                 }hover:bg-blue hover:text-white rounded-b-xl space-x-6 md:space-x-10`}
                 onClick={() => {
                   setSelectedFeature('rewards')
-                  setSelectedFeatureImage('/icons/rewards.svg')
+                  setSelectedFeatureImage('/img/rewards.svg')
                 }}
               >
                 <div
@@ -214,13 +212,23 @@ const Login: FC = () => {
           <div className="xl:px-48 py-16 lg:flex justify-center">
             <img
               className="w-1/2 mx-auto lg:mx-0 lg:w-44 justify-start mb-14 lg:mb-0"
-              src="/icons/email-us.svg"
+              src="/img/developer.svg"
               alt=""
             />
-            <div className="lg:pl-32 text-center">
-              <h2 className="text-5xl font-extrabold text-white mb-4 lg:mb-8">Email Us</h2>
+            <div className="lg:pl-32 text-center lg:text-left">
+              <h2 className="text-5xl font-extrabold text-white">API Solution</h2>
+              <p className="text-white">
+                Drifan allows you to get live update on your websites or app through our API
+                solutions.
+              </p>
+              <button
+                type="button"
+                className="mt-8 mx-auto rounded-md shadow-sm py-3 px-8 bg-dark-900 text-base text-white focus:outline-none sm:w-auto sm:text-sm"
+              >
+                API Solution
+              </button>
 
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 <input
                   className="appearance-none bg-white border-none w-full text-gray-700 py-3.5 px-2 leading-tight focus:outline-none rounded-l-md"
                   type="text"
@@ -233,7 +241,7 @@ const Login: FC = () => {
                 >
                   Email us
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
