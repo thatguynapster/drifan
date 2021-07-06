@@ -27,6 +27,7 @@ module.exports = {
       '2xl': '1.25rem',
       '3xl': '1.5rem',
       '4xl': '1.75rem',
+      '5xl': '2rem',
       full: '9999px',
       large: '12px',
     },
@@ -59,7 +60,7 @@ module.exports = {
       },
       backgroundImage: theme => ({
         'hero-pattern': "url('/img/hero-pattern.svg')",
-       })
+      })
     },
   },
   variants: {

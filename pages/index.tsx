@@ -209,17 +209,16 @@ const Login: FC = () => {
       {/* newsletter section */}
       <div className="grid justify-items-center px-4 lg:px-0 bg-gradient-to-b from-green-100 to-green-200">
         <div className="w-full lg:py-16 md:px-16 md:px-40">
-          <div className="xl:px-48 py-16 lg:flex justify-center">
+          <div className="xl:pl-48 xl:pr-11 py-16 lg:flex justify-center">
             <img
               className="w-1/2 mx-auto lg:mx-0 lg:w-44 justify-start mb-14 lg:mb-0"
               src="/img/developer.svg"
               alt=""
             />
-            <div className="lg:pl-32 text-center lg:text-left">
-              <h2 className="text-5xl font-extrabold text-white">API Solution</h2>
+            <div className="lg:pl-12 text-center lg:text-left">
+              <h2 className="text-5xl font-extrabold text-white">Become a road safety partner</h2>
               <p className="text-white">
-                Drifan allows you to get live update on your websites or app through our API
-                solutions.
+                Connect our Api to your website and join the millions to save lives on the road.
               </p>
               <button
                 type="button"
