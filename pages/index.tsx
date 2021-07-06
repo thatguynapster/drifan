@@ -20,8 +20,8 @@ const Login: FC = () => {
               What if your post could save a life?
             </h1>
             <p className="text-lg text-gray-600">
-              Drifan is a community that shows and allows you to post road alerts and events near
-              you in real time
+              Difan is a community platform for posts and views of road alerts and events in real
+              time
             </p>
           </div>
 

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "rm -rf .next/ && next -p 4800",
+    "dev": "rm -rf .next/ && next -p 5800",
     "devwin": "next -p 4800",
     "build": "next build && next export -o build/",
     "start": "next start",
