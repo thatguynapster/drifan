@@ -57,7 +57,7 @@ const Login: FC = () => {
         <div className="grid justify-items-center px-4 lg:px-0">
           <h2 className="text-4xl font-semibold text-center text-dark-900">How it works</h2>
           <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 mt-10">
-            <div className="relative mx-auto mr-0 my-auto bg-white rounded-xl w-full lg:w-4/5 xl:w-1/2">
+            <div className="relative mx-auto mr-0 my-auto bg-white rounded-xl w-full lg:w-4/5 xl:w-2/3 px-6 py-10">
               <img
                 className="my-auto rounded-xl w-full"
                 src={selectedFeatureImage}
