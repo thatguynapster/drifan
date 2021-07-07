@@ -2,25 +2,23 @@ import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import Link from 'next/link'
 import { Fragment } from 'react'
+import { IChatUsProps } from '../types'
 
-const solutions = [
+const chatLinks: IChatUsProps[] = [
   {
-    name: 'Insights',
-    description: 'Measure actions your users take',
-    href: '##',
-    icon: IconOne
+    name: 'Email Us',
+    icon: '/icons/email.svg',
+    link: '##'
   },
   {
-    name: 'Automations',
-    description: 'Create your own targeted content',
-    href: '##',
-    icon: IconTwo
+    name: 'Whatsapp Us',
+    icon: '/icons/whatsapp.svg',
+    link: 'whatsapp://send?phone=[PHONE_NUMBER_HERE]'
   },
   {
-    name: 'Reports',
-    description: 'Keep track of your growth',
-    href: '##',
-    icon: IconThree
+    name: 'Drifan connect',
+    icon: '/icons/signal.svg',
+    link: '##'
   }
 ]
 
@@ -48,31 +46,35 @@ export default function ChatUs() {
                 <p className="rounded-t-lg bg-blue text-center text-white py-2">Reachout to us</p>
 
                 <div className=" p-4 space-y-4">
-                  <Link href="mailto:">
-                    <div className="flex justify-start">
-                      <img
-                        className="w-1/4 h-auto mr-4 rounded-full"
-                        src="/icons/email.svg"
-                        alt="Share Content"
-                      />
-                      <div className="text-left my-auto">
-                        <p>Email Us</p>
-                      </div>
-                    </div>
-                  </Link>
+                  {chatLinks.map((_chLnk, i) => {
+                    return (
+                      <Link href={_chLnk.link}>
+                        <div className="flex justify-start">
+                          <img
+                            className="w-1/4 h-auto mr-4 rounded-full"
+                            src={_chLnk.icon}
+                            alt={_chLnk.name}
+                          />
+                          <div className="text-left my-auto">
+                            <p>{_chLnk.name}</p>
+                          </div>
+                        </div>
+                      </Link>
 
-                  <Link href="whatsapp://send?phone=[PHONE_NUMBER_HERE]">
-                    <div className="flex justify-start">
-                      <img
-                        className="w-1/4 h-auto mr-4 rounded-full"
-                        src="/icons/whatsapp.svg"
-                        alt="Share Content"
-                      />
-                      <div className="text-left my-auto">
-                        <p className="">Whatsapp Us</p>
-                      </div>
-                    </div>
-                  </Link>
+                      // <Link href="whatsapp://send?phone=[PHONE_NUMBER_HERE]">
+                      //   <div className="flex justify-start">
+                      //     <img
+                      //       className="w-1/4 h-auto mr-4 rounded-full"
+                      //       src="/icons/whatsapp.svg"
+                      //       alt="Share Content"
+                      //     />
+                      //     <div className="text-left my-auto">
+                      //       <p className="">Whatsapp Us</p>
+                      //     </div>
+                      //   </div>
+                      // </Link>
+                    )
+                  })}
                 </div>
               </div>
             </Popover.Panel>
