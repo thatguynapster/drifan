@@ -6,9 +6,9 @@ export const Footer: FC = () => {
     <div className="grid justify-items-center px-4 lg:px-0 bg-blue">
       <div className="mt-10 mb-24 text-center">
         <h2 className="w-full text-white font-bold text-4xl mb-8">Drifan</h2>
-        <p className="w-full text-white md:mx-auto md:w-96 mb-12">
+        {/* <p className="w-full text-white md:mx-auto md:w-96 mb-12">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-        </p>
+        </p> */}
         <div className="flex flex-col md:flex-row items-center justify-center space-y-14 md:space-y-0 md:space-x-14 text-white mb-14">
           <a href="#" className="text-base">
             How it works

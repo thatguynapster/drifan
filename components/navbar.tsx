@@ -15,6 +15,7 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
   const [navType, setNavType] = useState<string>('')
   const [textColor, setTextColor] = useState<string>('')
   const [logo, setLogo] = useState<string>('')
+  const [linkActive, setLinkActive] = useState<string>('')
 
   useEffect(() => {
     console.log(navVariant)
@@ -22,11 +23,13 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
       case 'blue':
         setNavType('bg-blue text-white')
         setTextColor('text-white')
+        setLinkActive('font-bold')
         setLogo('/icons/logo-white.svg')
         break
       default:
         setNavType('bg-white text-gray-900')
         setTextColor('text-gray-900')
+        setLinkActive('text-blue font-semibold')
         setLogo('/icons/logo.svg')
     }
   }, [navVariant])
@@ -35,17 +38,19 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
     // console.log(ev.currentTarget)
     if (ev.currentTarget.pageYOffset > 60) {
       setNavScroll(true)
-      if (pagename !== 'contact') {
-        setNavVariant('blue')
-        console.log('nav is blue')
-      } else {
-        setNavVariant('white')
-        console.log('nav is white')
-      }
+      // if (pagename !== 'contact') {
+      setNavVariant('blue')
+      setLinkActive('font-bold')
+      //   console.log('nav is blue')
+      // } else {
+      //   // setNavVariant('white')
+      //   console.log('nav is white')
+      // }
     } else {
       setNavScroll(false)
       if (pagename !== 'contact') {
         setNavVariant('white')
+        setLinkActive('text-blue font-semibold')
         console.log('nav is white')
       } else {
         setNavVariant('blue')
@@ -78,16 +83,16 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
 
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <Popover.Group as="nav" className="hidden md:flex space-x-5">
-                  <a href="/how-it-works" className="text-base font-semibold capitalize">
+                  <a href="/how-it-works" className={`text-base capitalize ${linkActive}`}>
                     how it works
                   </a>
-                  <a href="/about" className="text-base font-semibold">
+                  <a href="/about" className="text-base capitalize">
                     About Us
                   </a>
-                  <a href="/contact" className="text-base font-semibold">
+                  <a href="/contact" className="text-base capitalize">
                     Contact Us
                   </a>
-                  <a href="/team" className="text-base font-semibold">
+                  <a href="/team" className="text-base capitalize">
                     Our team &amp; Partners
                   </a>
                 </Popover.Group>
