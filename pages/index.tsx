@@ -26,7 +26,13 @@ const Login: FC = () => {
           </div>
 
           <div className="mt-16 lg:mt-28">
-            <img className="xl:px-96" src="/img/illustration_01.svg" alt="Illustration" />
+            <img
+              className="w-full h-auto xl:px-96"
+              src="/img/illustration_01.svg"
+              alt="Illustration"
+              width={694}
+              height={394}
+            />
           </div>
 
           <div className="mt-8 lg:mt-20 mb-12 lg:mb-28 space-x-2 sm:space-x-4 text-center">
@@ -218,13 +224,13 @@ const Login: FC = () => {
             <div className="lg:pl-12 text-center lg:text-left">
               <h2 className="text-5xl font-extrabold text-white">Become a road safety partner</h2>
               <p className="text-white">
-                Connect our Api to your website and join the millions to save lives on the road.
+                Connect our Api to your website and join the millions to save lives on our roads.
               </p>
               <button
                 type="button"
                 className="mt-8 mx-auto rounded-md shadow-sm py-3 px-8 bg-dark-900 text-base text-white focus:outline-none sm:w-auto sm:text-sm"
               >
-                API Solution
+                API Integration
               </button>
 
               {/* <div className="flex items-center">

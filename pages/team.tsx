@@ -2,13 +2,16 @@ import HeadFile from '../components/head-file'
 import React, { FC } from 'react'
 import Layout from '../components/layout'
 import { Footer } from '../components/footer'
+import { ITeamMemberProps } from '../types'
 
 const Team: FC = () => {
+  const teamMembers: ITeamMemberProps[] = []
+
   return (
     <Layout pagename="team">
       <HeadFile title="Drifan" />
 
-      <div className="pt-20 md:pt-24 pb-36 md:pb-32 bg-white px-4 lg:px-52">
+      <div className="py-20 md:py-24 bg-white px-4 lg:px-52">
         <div className="text-center">
           <h1 className="text-4xl font-semibold text-gray-900">Our Team</h1>
           <p className="mt-8 md:mx-44 text-gray-600 text-justify">
@@ -16,6 +19,10 @@ const Team: FC = () => {
             through innovation, technology and open mindedness. We love to make an impact where ever
             we are in the world.
           </p>
+        </div>
+
+        <div className="mt-16 text-center">
+          <h2 className="text-2xl font-semibold text-gray-900">Want to join the Drifan team?</h2>
 
           <button
             type="button"
@@ -23,69 +30,24 @@ const Team: FC = () => {
           >
             Join us
           </button>
-        </div>
-
-        <div className="mt-20 text-center">
-          <h2 className="text-2xl font-semibold text-gray-900">Want to join the Drifan team?</h2>
-
-          <div className="mt-20">
-            <div className="grid md:grid-cols-2 gap-16">
-              <div className="rounded-xl">
-                <div className="flex justify-start">
-                  <img
-                    className="w-44 h-44 mr-8 rounded-full"
-                    src="/img/team/freda.png"
-                    alt="Share Content"
-                  />
-                  <div className="flex flex-col text-left">
-                    <p className="text-lg font-semibold mt-4">Freda</p>
-                    <p className="text-gray-600">Photographer • Lucyiana Pixels</p>
+          <div className="grid md:grid-cols-2 gap-16">
+            {teamMembers.map((_member, i) => {
+              return (
+                <div className="rounded-xl">
+                  <div className="flex justify-start">
+                    <img
+                      className="w-44 h-44 mr-8 rounded-full"
+                      src={_member.image}
+                      alt={_member.name}
+                    />
+                    <div className="flex flex-col text-left">
+                      <p className="text-lg font-semibold mt-4">{_member.name}</p>
+                      <p className="text-gray-600">{_member.extra}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="rounded-xl">
-                <div className="flex justify-start">
-                  <img
-                    className="w-44 h-44 mr-8 rounded-full"
-                    src="/img/team/freda.png"
-                    alt="Share Content"
-                  />
-                  <div className="flex flex-col text-left">
-                    <p className="text-lg font-semibold mt-4">Freda</p>
-                    <p className="text-gray-600">Photographer • Lucyiana Pixels</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-xl">
-                <div className="flex justify-start">
-                  <img
-                    className="w-44 h-44 mr-8 rounded-full"
-                    src="/img/team/freda.png"
-                    alt="Share Content"
-                  />
-                  <div className="flex flex-col text-left">
-                    <p className="text-lg font-semibold mt-4">Freda</p>
-                    <p className="text-gray-600">Photographer • Lucyiana Pixels</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-xl">
-                <div className="flex justify-start">
-                  <img
-                    className="w-44 h-44 mr-8 rounded-full"
-                    src="/img/team/freda.png"
-                    alt="Share Content"
-                  />
-                  <div className="flex flex-col text-left">
-                    <p className="text-lg font-semibold mt-4">Freda</p>
-                    <p className="text-gray-600">Photographer • Lucyiana Pixels</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+              )
+            })}
           </div>
         </div>
       </div>
@@ -129,7 +91,7 @@ const Team: FC = () => {
 
         <div className="mt-28">
           <p className="text-center text-gray-600">
-          Become a partner and let's save lives on our roads. 
+            Become a partner and let's save lives on our roads.
           </p>
 
           <div className="mt-10 space-x-4 text-center">

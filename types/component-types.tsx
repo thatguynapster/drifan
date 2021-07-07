@@ -15,3 +15,15 @@ export interface INavbarProps {
   variant?: string
   pagename: string
 }
+
+export interface ITeamMemberProps {
+  name: string
+  image: string
+  extra: string
+}
+
+export interface IChatUsProps {
+  name: string
+  icon: string
+  link: string
+}
