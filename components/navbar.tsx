@@ -83,16 +83,36 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
 
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <Popover.Group as="nav" className="hidden md:flex space-x-5">
-                  <a href="/how-it-works" className={`text-base capitalize ${linkActive}`}>
+                  <a
+                    href="/how-it-works"
+                    className={`text-base capitalize ${
+                      pagename === 'how-it-works' ? linkActive : ''
+                    }`}
+                  >
                     how it works
                   </a>
-                  <a href="/about" className="text-base capitalize">
+                  <a
+                    href="/about"
+                    className={`text-base capitalize ${
+                      pagename === 'about' ? linkActive : ''
+                    }`}
+                  >
                     About Us
                   </a>
-                  <a href="/contact" className="text-base capitalize">
+                  <a
+                    href="/contact"
+                    className={`text-base capitalize ${
+                      pagename === 'contact' ? linkActive : ''
+                    }`}
+                  >
                     Contact Us
                   </a>
-                  <a href="/team" className="text-base capitalize">
+                  <a
+                    href="/team"
+                    className={`text-base capitalize ${
+                      pagename === 'team' ? linkActive : ''
+                    }`}
+                  >
                     Our team &amp; Partners
                   </a>
                 </Popover.Group>
