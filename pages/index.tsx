@@ -209,6 +209,15 @@ const Login: FC = () => {
               </div>
             </div>
           </dl>
+
+          <div className="mt-24 space-x-2 sm:space-x-4 text-center">
+            <button
+              type="button"
+              className="mx-auto rounded-md shadow-sm py-3 px-8 bg-blue text-base text-white focus:outline-none focus:ring-2 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+            >
+              Try Now
+            </button>
+          </div>
         </div>
       </div>
 

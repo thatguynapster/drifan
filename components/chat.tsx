@@ -8,12 +8,12 @@ const chatLinks: IChatUsProps[] = [
   {
     name: 'Email Us',
     icon: '/icons/email.svg',
-    link: '##'
+    link: 'mailto:drifan2021@gmail.com'
   },
   {
     name: 'Whatsapp Us',
     icon: '/icons/whatsapp.svg',
-    link: 'whatsapp://send?phone=[PHONE_NUMBER_HERE]'
+    link: 'whatsapp://send?phone=[233200969775]'
   },
   {
     name: 'Drifan connect',
