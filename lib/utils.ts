@@ -2,10 +2,12 @@ import Router from 'next/router'
 
 /** navigate pages */
 export const navigate = (pagename: string = '', query = {}, sameSite = true) => {
-  Router.push({
-    pathname: `${sameSite ? '/' : ''}${pagename}`,
-    query: query
-  })
+  console.log(pagename)
+  console.log(process.env)
+  // Router.push({
+  //   pathname: `${sameSite ? '/' : ''}${pagename}`,
+  //   query: query
+  // })
 }
 
 /** get queries from url */
