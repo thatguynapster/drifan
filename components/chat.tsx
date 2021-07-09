@@ -48,7 +48,7 @@ export default function ChatUs() {
                 <div className=" p-4 space-y-4">
                   {chatLinks.map((_chLnk, i) => {
                     return (
-                      <Link href={_chLnk.link}>
+                      <Link href={_chLnk.link} key={i}>
                         <div className="flex justify-start">
                           <img
                             className="w-1/4 h-auto mr-4 rounded-full"

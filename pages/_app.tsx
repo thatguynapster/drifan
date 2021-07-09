@@ -12,9 +12,25 @@ import '../public/css/scrollbar.css'
 
 /** Global components */
 import { ToastContainer } from 'react-toastify'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
+
+import * as gtag from '../utils/gtag';
 
 // This default export is required in a new `pages/_app.js` file.
 export const Main = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter()
+
+  useEffect(() => {
+    const handleRouteChange = (url: URL) => {
+      gtag.pageview(url)
+    }
+    router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
+
   return (
     <>
       <Component {...pageProps} />

@@ -7,22 +7,6 @@ import ChatUs from '../components/chat'
 import { useEffect } from 'react'
 
 const Layout: FC<ILayoutProps> = ({ pagename, children, navVariant }) => {
-  // console.log(userDetails)
-  // console.log("data in layout")
-
-  useEffect(() => {
-    if (process.browser) {
-      console.log('adding g-tag')
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag('js', new Date())
-
-      gtag('config', 'G-BPXLJF62DP')
-      console.log(gtag, 'added g-tag')
-    }
-  }, [])
 
   return (
     <>
@@ -38,9 +22,6 @@ const Layout: FC<ILayoutProps> = ({ pagename, children, navVariant }) => {
           </div>
         </div>
       </div>
-
-      {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPXLJF62DP"></script>
     </>
   )
 }
