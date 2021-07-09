@@ -15,11 +15,11 @@ const chatLinks: IChatUsProps[] = [
     icon: '/icons/whatsapp.svg',
     link: `whatsapp://send?phone=[${process.env.NEXT_PUBLIC_WHATSAPP}]`
   },
-  {
-    name: 'Drifan connect',
-    icon: '/icons/signal.svg',
-    link: `https://telegram.me/${process.env.NEXT_PUBLIC_TELEGRAM}`
-  }
+  // {
+  //   name: 'Drifan connect',
+  //   icon: '/icons/signal.svg',
+  //   link: `https://telegram.me/${process.env.NEXT_PUBLIC_TELEGRAM}`
+  // }
 ]
 
 export default function ChatUs() {
