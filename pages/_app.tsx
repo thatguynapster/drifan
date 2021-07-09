@@ -15,7 +15,7 @@ import { ToastContainer } from 'react-toastify'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
-import * as gtag from '../utils/gtag';
+import * as gtag from '../utils/gtag'
 
 // This default export is required in a new `pages/_app.js` file.
 export const Main = ({ Component, pageProps }: AppProps) => {
@@ -23,7 +23,7 @@ export const Main = ({ Component, pageProps }: AppProps) => {
 
   useEffect(() => {
     const handleRouteChange = (url: URL) => {
-      gtag.pageview(url)
+      process.env.NODE_ENV === 'production' && gtag.pageview(url)
     }
     router.events.on('routeChangeComplete', handleRouteChange)
     return () => {

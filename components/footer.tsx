@@ -30,13 +30,13 @@ export const Footer: FC = () => {
           </a>
         </div>
         <div className="w-full flex items-center justify-center space-x-14 text-white">
-          <a href="##" target="_blank" className="text-base">
+          <a href={process.env.NEXT_PUBLIC_FACEBOOK} target="_blank" className="text-base">
             <img src="/icons/facebook.svg" alt="Facebook" />
           </a>
-          <a href="https://twitter.com/Drifan_alerts" target="_blank" className="text-base">
+          <a href={process.env.NEXT_PUBLIC_TWITTER} target="_blank" className="text-base">
             <img src="/icons/twitter.svg" alt="Twitter" />
           </a>
-          <a href="##" target="_blank" className="text-base">
+          <a href={process.env.NEXT_PUBLIC_INSTAGRAM} target="_blank" className="text-base">
             <img src="/icons/instagram.svg" alt="Instagram" />
           </a>
         </div>

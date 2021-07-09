@@ -9,7 +9,6 @@ import { useEffect } from 'react'
 
 // export default function Navbar() {
 export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
-  console.log(pagename)
   const [navScroll, setNavScroll] = useState<boolean>(false)
   const [navVariant, setNavVariant] = useState<string | undefined>(variant)
   const [navType, setNavType] = useState<string>('')
@@ -18,7 +17,7 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
   const [linkActive, setLinkActive] = useState<string>('')
 
   useEffect(() => {
-    console.log(navVariant)
+    // console.log(navVariant)
     switch (navVariant) {
       case 'blue':
         setNavType('bg-blue text-white')
@@ -51,10 +50,10 @@ export const Navbar: FC<INavbarProps> = ({ variant, pagename }) => {
       if (pagename !== 'contact') {
         setNavVariant('white')
         setLinkActive('text-blue font-semibold')
-        console.log('nav is white')
+        // console.log('nav is white')
       } else {
         setNavVariant('blue')
-        console.log('nav is blue')
+        // console.log('nav is blue')
       }
     }
   })

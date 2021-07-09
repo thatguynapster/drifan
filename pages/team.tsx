@@ -3,6 +3,7 @@ import React, { FC } from 'react'
 import Layout from '../components/layout'
 import { Footer } from '../components/footer'
 import { ITeamMemberProps } from '../types'
+import { navigate } from '../utils/functions'
 
 const Team: FC = () => {
   const teamMembers: ITeamMemberProps[] = []
@@ -104,6 +105,9 @@ const Team: FC = () => {
             <button
               type="button"
               className="mx-auto rounded-md shadow-sm py-3 px-8 bg-white border border-blue text-base text-blue focus:outline-none focus:ring-2 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+              onClick={() => {
+                navigate('./contact')
+              }}
             >
               Email us
             </button>
