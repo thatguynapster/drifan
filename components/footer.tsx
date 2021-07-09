@@ -33,7 +33,7 @@ export const Footer: FC = () => {
           <a href={process.env.NEXT_PUBLIC_PRIVACY_POLICY_LINK} className="text-base">
             Privacy Policy
           </a>
-          <a href="#" className="text-base">
+          <a href={process.env.NEXT_PUBLIC_EXPLORE_LINK} className="text-base">
             Explore
           </a>
         </div>
