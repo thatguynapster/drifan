@@ -3,6 +3,7 @@ import React, { FC } from 'react'
 import Layout from '../components/layout'
 import { Footer } from '../components/footer'
 import { useState } from 'react'
+import { navigate } from '../lib'
 
 const Login: FC = () => {
   const [selectedFeature, setSelectedFeature] = useState<string>('share')
@@ -39,12 +40,18 @@ const Login: FC = () => {
             <button
               type="button"
               className="mx-auto rounded-md shadow-sm py-3 px-8 bg-blue text-base text-white focus:outline-none focus:ring-2 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+              onClick={() => {
+                navigate(process.env.NEXT_PUBLIC_LOGIN_LINK)
+              }}
             >
               Explore
             </button>
             <button
               type="button"
               className="mx-auto rounded-md shadow-sm py-3 px-8 bg-white border border-blue text-base text-blue focus:outline-none focus:ring-2 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+              onClick={() => {
+                navigate(process.env.NEXT_PUBLIC_SIGNUP_LINK)
+              }}
             >
               Sign up
             </button>
@@ -214,6 +221,9 @@ const Login: FC = () => {
             <button
               type="button"
               className="mx-auto rounded-md shadow-sm py-3 px-8 bg-blue text-base text-white focus:outline-none focus:ring-2 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+              onClick={() => {
+                navigate(process.env.NEXT_PUBLIC_LOGIN_LINK)
+              }}
             >
               Try Now
             </button>
@@ -238,24 +248,12 @@ const Login: FC = () => {
               <button
                 type="button"
                 className="mt-8 mx-auto rounded-md shadow-sm py-3 px-8 bg-dark-900 text-base text-white focus:outline-none sm:w-auto sm:text-sm"
+                onClick={() => {
+                  navigate(process.env.NEXT_PUBLIC_API_INTEGRATION_LINK)
+                }}
               >
                 API Integration
               </button>
-
-              {/* <div className="flex items-center">
-                <input
-                  className="appearance-none bg-white border-none w-full text-gray-700 py-3.5 px-2 leading-tight focus:outline-none rounded-l-md"
-                  type="text"
-                  placeholder="Your email address"
-                  aria-label="Your email address"
-                />
-                <button
-                  className="flex-shrink-0 bg-dark-900 text-sm text-white py-3.5 px-6 rounded-r-md"
-                  type="button"
-                >
-                  Email us
-                </button>
-              </div> */}
             </div>
           </div>
         </div>

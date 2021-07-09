@@ -2,6 +2,7 @@ import HeadFile from '../components/head-file'
 import React, { FC } from 'react'
 import Layout from '../components/layout'
 import { Footer } from '../components/footer'
+import { navigate } from '../utils/functions'
 
 const About: FC = () => {
   return (
@@ -23,6 +24,9 @@ const About: FC = () => {
           <button
             type="button"
             className="mt-8 mx-auto rounded-md shadow-sm py-3 px-8 bg-blue text-base text-white focus:outline-none focus:ring-2 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+            onClick={() => {
+              navigate(`mailto:${process.env.NEXT_PUBLIC_EMAIL}`)
+            }}
           >
             Email us
           </button>
