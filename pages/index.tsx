@@ -50,7 +50,7 @@ const Login: FC = () => {
               type="button"
               className="mx-auto rounded-md shadow-sm py-3 px-8 bg-white border border-blue text-base text-blue focus:outline-none focus:ring-2 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
               onClick={() => {
-                navigate(process.env.NEXT_PUBLIC_SIGNUP_LINK)
+                navigate(process.env.NEXT_PUBLIC_SIGNUP_LINK, '', false)
               }}
             >
               Sign up
@@ -222,7 +222,7 @@ const Login: FC = () => {
               type="button"
               className="mx-auto rounded-md shadow-sm py-3 px-8 bg-blue text-base text-white focus:outline-none focus:ring-2 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
               onClick={() => {
-                navigate(process.env.NEXT_PUBLIC_LOGIN_LINK)
+                navigate(process.env.NEXT_PUBLIC_LOGIN_LINK, '', false)
               }}
             >
               Try Now
@@ -249,7 +249,7 @@ const Login: FC = () => {
                 type="button"
                 className="mt-8 mx-auto rounded-md shadow-sm py-3 px-8 bg-dark-900 text-base text-white focus:outline-none sm:w-auto sm:text-sm"
                 onClick={() => {
-                  navigate(process.env.NEXT_PUBLIC_API_INTEGRATION_LINK)
+                  navigate(process.env.NEXT_PUBLIC_API_INTEGRATION_LINK, '', false)
                 }}
               >
                 API Integration

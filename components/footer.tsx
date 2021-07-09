@@ -1,6 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { FC } from 'react'
-import { navigate } from '../utils/functions'
+import { navigate } from '../lib'
 
 export const Footer: FC = () => {
   return (

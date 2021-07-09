@@ -2,7 +2,7 @@ import HeadFile from '../components/head-file'
 import React, { FC } from 'react'
 import Layout from '../components/layout'
 import { Footer } from '../components/footer'
-import { navigate } from '../utils/functions'
+import { navigate } from '../lib'
 
 const HowItWorks: FC = () => {
   return (
@@ -57,7 +57,7 @@ const HowItWorks: FC = () => {
             type="button"
             className="mt-24 mx-auto rounded-md shadow-sm py-3 px-8 bg-blue text-base text-white focus:outline-none sm:w-auto sm:text-sm"
             onClick={() => {
-              navigate(process.env.NEXT_PUBLIC_LOGIN_LINK)
+              navigate(process.env.NEXT_PUBLIC_LOGIN_LINK, '', false)
             }}
           >
             Try Now

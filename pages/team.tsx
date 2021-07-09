@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 import Layout from '../components/layout'
 import { Footer } from '../components/footer'
 import { ITeamMemberProps } from '../types'
-import { navigate } from '../utils/functions'
+import { navigate } from '../lib'
 
 const Team: FC = () => {
   const teamMembers: ITeamMemberProps[] = []
@@ -28,6 +28,9 @@ const Team: FC = () => {
           <button
             type="button"
             className="mt-8 mx-auto rounded-md shadow-sm py-3 px-8 bg-blue text-base text-white focus:outline-none focus:ring-2 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+            onClick={() => {
+              navigate(`mailto:${process.env.NEXT_PUBLIC_EMAIL}`, '', false)
+            }}
           >
             Join us
           </button>
@@ -96,20 +99,20 @@ const Team: FC = () => {
           </p>
 
           <div className="mt-10 space-x-4 text-center">
-            <button
+            {/* <button
               type="button"
               className="mx-auto rounded-md shadow-sm py-3 px-8 bg-blue text-base text-white focus:outline-none focus:ring-2 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
               onClick={() => {
-                navigate(process.env.NEXT_PUBLIC_DONATE_LINK)
+                navigate(process.env.NEXT_PUBLIC_DONATE_LINK, '', false)
               }}
             >
               Donate to Drifan
-            </button>
+            </button> */}
             <button
               type="button"
               className="mx-auto rounded-md shadow-sm py-3 px-8 bg-white border border-blue text-base text-blue focus:outline-none focus:ring-2 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
               onClick={() => {
-                navigate('./contact')
+                navigate(`mailto:${process.env.NEXT_PUBLIC_EMAIL}`, '', false)
               }}
             >
               Email us
