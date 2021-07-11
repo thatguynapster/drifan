@@ -9,153 +9,43 @@ export const navigate = (pagename: string = '', query = {}, sameSite = true) => 
   })
 }
 
-/** get queries from url */
-export const get_query = (query_name: string) => {
-  var urlParams = new URLSearchParams(window.location.search)
-  var query = urlParams.get(query_name)
-  return query
+export function validateEmail(email: string) {
+  var re =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  return re.test(email.toLowerCase())
 }
 
-/** convert base64/URLEncoded data component to raw binary or blob */
-export const dataURItoBlob = (dataURI: any, contentType: string) => {
-  // convert  data held in a string
-  var sliceSize = 512
-  var byteCharacters = atob(dataURI)
-  var byteArrays = []
+export async function mkPostReq(payload: {
+  endpoint: string
+  method: string
+  token: string
+  data: any
+  isJSON: boolean
+  queries?: string
+  sameSite?: boolean
+}) {
+  var response = {}
 
-  for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
-    var slice = byteCharacters.slice(offset, offset + sliceSize)
+  let url = `${process.env.NEXT_PUBLIC_BASE_URL}${payload.endpoint}?${payload.queries}`
 
-    var byteNumbers = new Array(slice.length)
-    for (var i = 0; i < slice.length; i++) {
-      byteNumbers[i] = slice.charCodeAt(i)
-    }
+  payload.sameSite && (url = `${payload.endpoint}`)
 
-    var byteArray = new Uint8Array(byteNumbers)
-
-    byteArrays.push(byteArray)
+  const options: {
+    method: string
+    cors: string
+    headers: any
+    body: any
+  } = {
+    method: payload.method,
+    cors: 'no-cors',
+    headers: {},
+    body: payload.data
   }
 
-  var blob = new Blob(byteArrays, { type: contentType })
+  payload.isJSON && (options.headers['Content-Type'] = 'application/json')
 
-  return blob
-}
+  const saveItem = await fetch(url, options)
+  const results = await saveItem.json()
 
-/** times function  */
-export const times = (n: number, iterator: any) => {
-  var accum = Array(Math.max(0, n))
-  for (var i = 0; i < n; i++) accum[i] = iterator.call()
-  return accum
-}
-
-export function msToDate(_ms: number) {
-  var time = new Date(_ms)
-
-  var year = time.getFullYear()
-  var month = time.getMonth() + 1
-  var day = time.getDate()
-
-  return `${day}/${month}/${year}`
-}
-
-// add or subtract some days from given date
-export function addDays(theDate: Date, days: number) {
-  return new Date(theDate.getTime() + days * 24 * 60 * 60 * 1000)
-}
-
-/** parse string to markdoown */
-export const parseMarkdown = (markdownText: string) => {
-  const htmlText = markdownText
-    .replace(/^### (.*$)/gim, '<h3>$1</h3>')
-    .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-    .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-    .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
-    .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
-    .replace(/\*(.*)\*/gim, '<strong>$1</strong>')
-    .replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
-    .replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
-    .replace(/\n$/gim, '<br />')
-
-  return htmlText.trim()
-}
-
-/**
- * Implement time ago
- * **************************************************************
- */
-
-const MONTH_NAMES = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December'
-]
-
-function getFormattedDate(date: Date, prefomattedDate: string | boolean = false, hideYear = false) {
-  const day = date.getDate()
-  const month = MONTH_NAMES[date.getMonth()]
-  const year = date.getFullYear()
-  const hours = date.getHours()
-  let minutes = date.getMinutes()
-
-  if (minutes < 10) {
-    // Adding leading zero to minutes
-    minutes = parseInt(`0${minutes}`)
-  }
-
-  if (prefomattedDate) {
-    // Today at 10:20
-    // Yesterday at 10:20
-    return `${prefomattedDate} at ${hours}:${minutes}`
-  }
-
-  if (hideYear) {
-    //January 10, at 10:20
-    return `${month} ${day}, at ${hours}:${minutes}`
-  }
-
-  // January 10, 2017 at 10:20
-  return `${month} ${day}, ${year} at ${hours}:${minutes}`
-}
-
-/** Time Ago main function */
-export function timeAgo(dateParam: string | number | Date) {
-  dateParam = new Date(dateParam)
-  const date = dateParam
-  const DAY_IN_MS = 86400000 // 24 * 60 * 60 * 1000
-  const today = new Date()
-  const yesterday = new Date(today.getTime() - DAY_IN_MS)
-  const seconds = Math.round((today.getTime() - date.getTime()) / 1000)
-  const minutes = Math.round(seconds / 60)
-  const isToday = today.toDateString() === date.toDateString()
-  const isYesterday = yesterday.toDateString() === date.toDateString()
-  const isThisYear = today.getFullYear() === date.getFullYear()
-
-  if (seconds < 5) {
-    return 'now'
-  } else if (seconds < 60) {
-    return `${seconds} seconds ago`
-  } else if (seconds < 90) {
-    return 'about a minute ago'
-  } else if (minutes < 60) {
-    return `${minutes} minutes ago`
-  } else if (isToday) {
-    return getFormattedDate(date, 'Today') // Today at 10:20
-  } else if (isYesterday) {
-    return getFormattedDate(date, 'Yesterday') // Yesterday at 10:20
-  } else if (isThisYear) {
-    return getFormattedDate(date, false, true) // 10. January at 10:20
-  }
-
-  console.log(getFormattedDate(date))
-
-  return getFormattedDate(date) // 10. January 2017. at 10:20
+  return results
 }
